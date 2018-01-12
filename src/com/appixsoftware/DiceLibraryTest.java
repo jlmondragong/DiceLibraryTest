@@ -17,7 +17,7 @@ public class DiceLibraryTest {
         DiceThrower dt = new DiceThrower();
         DiceType diceType = DiceType.D8;
         int[] s = new int[diceType.getSides()];
-        Dice[] dices = dt.getThrow(diceType, 10);
+        Dice[] dices = dt.getThrow(diceType, 100);
         for (Dice dice : dices) {
             s[dice.getCurrentValue() - 1]++;
             System.out.println(dice);
@@ -26,7 +26,7 @@ public class DiceLibraryTest {
         System.out.println("");
         System.out.println("Sumary:");
         for (int i = 0; i < s.length; i++) {
-            System.out.println((i + 1) + ": " + s[i]);
+            System.out.println("Value " + (i + 1) + ": " + s[i] + " times");
         }
 
     }
