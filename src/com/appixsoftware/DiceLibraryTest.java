@@ -15,12 +15,12 @@ public class DiceLibraryTest {
      */
     public static void main(String[] args) {
         DiceThrower dt = new DiceThrower();
-        DiceType diceType = DiceType.D8;
+        DiceType diceType = DiceType.D6;
         int[] s = new int[diceType.getSides()];
-        Dice[] dices = dt.getThrow(diceType, 100);
-        for (Dice dice : dices) {
-            s[dice.getCurrentValue() - 1]++;
-            System.out.println(dice);
+        Dice[] dice = dt.getThrow(diceType, 10);
+        for (Dice die : dice) {
+            s[die.getCurrentValue() - 1]++;
+            System.out.println(die);
         }
 
         System.out.println("");
