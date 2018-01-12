@@ -14,9 +14,9 @@ public class DiceLibraryTest {
      */
     public static void main(String[] args) {
         DiceThrower dt = new DiceThrower();
-        int sidesNumber = 6;
+        int sidesNumber = 8;
         int[] s = new int[sidesNumber];
-        Dice[] dices = dt.getThrow(6, 10);
+        Dice[] dices = dt.getThrow(sidesNumber, 100);
         for (Dice dice : dices) {
             s[dice.getCurrentValue()-1]++;
             System.out.println(dice);
