@@ -14,10 +14,9 @@ public class DiceLibraryTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        DiceThrower dt = new DiceThrower();
         DiceType diceType = DiceType.D6;
         int[] s = new int[diceType.getSides()];
-        Dice[] dice = dt.getThrow(diceType, 10);
+        Dice[] dice = DiceThrower.getThrow(diceType, 10);
         for (Dice die : dice) {
             s[die.getCurrentValue() - 1]++;
             System.out.println(die);
